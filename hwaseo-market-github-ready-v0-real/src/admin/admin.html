@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>화서시장 관리자</title>
+  <link rel="stylesheet" href="../assets/css/admin/admin.css" />
+</head>
+<body>
+  <div class="admin-shell">
+    <div class="admin-header">
+      <div>
+        <span class="admin-badge">ADMIN</span>
+        <h1 class="admin-title">화서시장 관리자 페이지</h1>
+      </div>
+      <a href="../index.html">← 메인으로 돌아가기</a>
+    </div>
+    <div class="admin-grid">
+      <section class="admin-card">
+        <h2>배너 관리</h2>
+        <p><strong>src/data/banners.json</strong>을 기준으로 관리합니다.</p>
+        <p>현재 배너 수: <strong data-count="banners">-</strong></p>
+      </section>
+      <section class="admin-card">
+        <h2>상품 관리</h2>
+        <p><strong>src/data/products.json</strong>을 기준으로 관리합니다.</p>
+        <p>현재 상품 수: <strong data-count="products">-</strong></p>
+      </section>
+      <section class="admin-card">
+        <h2>화서소식 관리</h2>
+        <p><strong>src/data/news.json</strong>을 기준으로 관리합니다.</p>
+        <p>현재 소식 수: <strong data-count="news">-</strong></p>
+      </section>
+      <section class="admin-card">
+        <h2>점포 관리</h2>
+        <p><strong>src/data/stores.json</strong>을 기준으로 관리합니다.</p>
+        <p>현재 점포 수: <strong data-count="stores">-</strong></p>
+      </section>
+    </div>
+  </div>
+  <script src="../assets/js/admin/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.slider { position: relative; overflow: hidden; background: #111; height: 460px; }
+    .slides { display: flex; height: 100%; transition: transform .6s cubic-bezier(.4,0,.2,1); }
+    .slide { flex: 0 0 100%; position: relative; }
+    .slide img { width: 100%; height: 100%; object-fit: cover; opacity: .85; }
+    .slide-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,.65) 0%, rgba(0,0,0,.3) 50%, transparent 100%); display: flex; align-items: center; }
+    .slide-content { max-width: 520px; padding: 0 60px; color: #fff; }
+    .slide-tag { font-size: 14px; font-weight: 700; color: #ffd54f; margin-bottom: 10px; letter-spacing: 1px; }
+    .slide-title { font-size: 42px; font-weight: 900; line-height: 1.2; margin-bottom: 24px; }
+    .slide-btn { display: inline-block; padding: 14px 28px; background: var(--primary); color: #fff; border-radius: 10px; font-weight: 700; font-size: 15px; box-shadow: 0 6px 20px rgba(232,38,26,.35); transition: background .15s, transform .15s; }
+    .slide-btn:hover { background: #c0201a; transform: translateY(-2px); }
+
+    .slider-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; background: rgba(255,255,255,.18); backdrop-filter: blur(6px); border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .2s, background .15s; }
+    .slider:hover .slider-arrow { opacity: 1; }
+    .slider-arrow:hover { background: rgba(255,255,255,.32); }
+    .slider-arrow svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .slider-prev { left: 16px; }
+    .slider-next { right: 16px; }
+    .slider-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
+    .slider-dot { width: 8px; height: 8px; border-radius: 100px; background: rgba(255,255,255,.45); border: none; transition: width .25s, background .25s; cursor: pointer; }
+    .slider-dot.active { width: 28px; background: #fff; }
