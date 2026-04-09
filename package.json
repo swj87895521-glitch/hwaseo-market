@@ -1,0 +1,30 @@
+{
+  "name": "hwaseo-market",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "check:forbidden-names": "tsx scripts/check-forbidden-names.ts",
+    "check:home": "tsx scripts/check-home-section-consistency.ts",
+    "check:content-shape": "tsx scripts/audit-content-shape.ts"
+  },
+  "dependencies": {
+    "next": "14.2.30",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.17.50",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.30",
+    "prettier": "3.5.3",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  }
+}

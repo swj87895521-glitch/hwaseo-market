@@ -1,0 +1,40 @@
+import type { EventBanner } from '@/types/eventBanner';
+
+export const eventBanners: EventBanner[] = [
+  {
+    id: 'banner-1',
+    tag: '✨ 산지 직송 특별 기획전',
+    title: '화서시장 직거래 신선 배송',
+    subtitle: '시장 대표 상품을 온라인과 오프라인 혜택으로 함께 연결합니다.',
+    image: 'https://picsum.photos/seed/market1/1400/460',
+    ctaLabel: '자세히 보기',
+    ctaLink: '/events/banner-1',
+    eventType: 'special',
+    isActive: true,
+    displayOrder: 1,
+  },
+  {
+    id: 'banner-2',
+    tag: '🎣 이달의 특가',
+    title: '수산물 20% 할인 통영 굴·서해 새우',
+    subtitle: '지금 가장 반응이 좋은 제철 특가 상품을 만나보세요.',
+    image: 'https://picsum.photos/seed/market2/1400/460',
+    ctaLabel: '특가 보러가기',
+    ctaLink: '/events/banner-2',
+    eventType: 'discount',
+    isActive: true,
+    displayOrder: 2,
+  },
+  {
+    id: 'banner-3',
+    tag: '🏆 수원 명물',
+    title: '수원 왕갈비 양념 화서시장 특산 세트',
+    subtitle: '화서시장을 대표하는 지역 특산 상품을 온라인으로 소개합니다.',
+    image: 'https://picsum.photos/seed/market3/1400/460',
+    ctaLabel: '특산품 보기',
+    ctaLink: '/products',
+    eventType: 'season',
+    isActive: true,
+    displayOrder: 3,
+  },
+];
