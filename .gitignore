@@ -1,0 +1,6 @@
+node_modules/
+
+# Keep header image assets out of PRs until binary uploads are supported.
+hwaseo-market-github-ready-v0-real/public/images/icons/icon-cart.png
+hwaseo-market-github-ready-v0-real/public/images/icons/icon-mypage.png
+hwaseo-market-github-ready-v0-real/public/images/logos/hwaseo-market-official-logo.png
