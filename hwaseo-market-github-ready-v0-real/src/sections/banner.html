@@ -1,0 +1,48 @@
+<section class="slider" id="slider">
+<div class="slides" id="slides">
+<!-- Slide 1 -->
+<div class="slide">
+<img alt="배너1" src="https://picsum.photos/seed/market1/1400/460"/>
+<div class="slide-overlay">
+<div class="slide-content">
+<p class="slide-tag">✨ 산지 직송 특별 기획전</p>
+<h2 class="slide-title">화서시장 직거래<br/>신선 배송</h2>
+<a class="slide-btn" href="#">자세히 보기</a>
+</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="slide">
+<img alt="배너2" src="https://picsum.photos/seed/market2/1400/460"/>
+<div class="slide-overlay">
+<div class="slide-content">
+<p class="slide-tag">🎣 이달의 특가</p>
+<h2 class="slide-title">수산물 20% 할인<br/>통영 굴·서해 새우</h2>
+<a class="slide-btn" href="#">특가 보러가기</a>
+</div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="slide">
+<img alt="배너3" src="https://picsum.photos/seed/market3/1400/460"/>
+<div class="slide-overlay">
+<div class="slide-content">
+<p class="slide-tag">🏆 수원 명물</p>
+<h2 class="slide-title">수원 왕갈비 양념<br/>화서시장 특산 세트</h2>
+<a class="slide-btn" href="#">특산품 보기</a>
+</div>
+</div>
+</div>
+</div>
+<button aria-label="이전" class="slider-arrow slider-prev" onclick="moveSlide(-1)">
+<svg viewbox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</button>
+<button aria-label="다음" class="slider-arrow slider-next" onclick="moveSlide(1)">
+<svg viewbox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+<div class="slider-dots" id="dots">
+<button class="slider-dot active" onclick="goSlide(0)"></button>
+<button class="slider-dot" onclick="goSlide(1)"></button>
+<button class="slider-dot" onclick="goSlide(2)"></button>
+</div>
+</section>

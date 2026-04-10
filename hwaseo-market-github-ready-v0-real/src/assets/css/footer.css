@@ -1,0 +1,19 @@
+footer { background: #1a1a1a; color: rgba(255,255,255,.6); padding: 60px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand h2 { font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 16px; }
+    .footer-brand p { font-size: 13px; line-height: 1.8; margin-bottom: 24px; max-width: 340px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .social-btn { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: rgba(255,255,255,.7); transition: background .15s; cursor: pointer; }
+    .social-btn:hover { background: var(--primary); color: #fff; }
+    .footer-col h3 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 20px; }
+    .footer-phone { font-size: 28px; font-weight: 900; color: var(--primary); margin-bottom: 8px; }
+    .footer-hours { font-size: 13px; line-height: 1.7; margin-bottom: 16px; }
+    .footer-inquiry { padding: 8px 16px; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; font-size: 13px; color: rgba(255,255,255,.6); cursor: pointer; transition: background .15s; }
+    .footer-inquiry:hover { background: rgba(255,255,255,.1); }
+    .footer-links { display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,.55); transition: color .15s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 28px; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+    .footer-info { font-size: 11px; line-height: 2; color: rgba(255,255,255,.35); }
+    .footer-badges { display: flex; gap: 10px; flex-shrink: 0; }
+    .footer-badge { padding: 6px 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 6px; font-size: 11px; color: rgba(255,255,255,.4); }

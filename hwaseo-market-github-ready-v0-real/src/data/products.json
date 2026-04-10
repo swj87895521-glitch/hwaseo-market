@@ -1,0 +1,204 @@
+[
+  {
+    "id": 1,
+    "category": "채소·과일",
+    "name": "유기농 완숙 토마토",
+    "discountPercent": "20%",
+    "originalPrice": "15,000원",
+    "price": "12,000",
+    "priceUnit": "원",
+    "pricePer": "/ 1kg",
+    "badges": [
+      "BEST"
+    ],
+    "tags": [
+      "#유기농",
+      "#산지직송"
+    ],
+    "image": "https://picsum.photos/seed/tomato/400/400"
+  },
+  {
+    "id": 2,
+    "category": "수산물",
+    "name": "생굴 (제철) 통영 청정해역 직송",
+    "discountPercent": "17%",
+    "originalPrice": "30,000원",
+    "price": "25,000",
+    "priceUnit": "원",
+    "pricePer": "/ 1kg",
+    "badges": [
+      "BEST"
+    ],
+    "tags": [
+      "#통영산",
+      "#제철"
+    ],
+    "image": "https://picsum.photos/seed/oyster/400/400"
+  },
+  {
+    "id": 3,
+    "category": "정육",
+    "name": "국내산 돼지 삼겹살 1등급",
+    "discountPercent": "15%",
+    "originalPrice": "26,000원",
+    "price": "22,000",
+    "priceUnit": "원",
+    "pricePer": "/ 500g",
+    "badges": [
+      "BEST"
+    ],
+    "tags": [
+      "#1등급",
+      "#국내산"
+    ],
+    "image": "https://picsum.photos/seed/pork/400/400"
+  },
+  {
+    "id": 4,
+    "category": "반찬·젓갈",
+    "name": "화서시장 직접 담은 전통 포기김치",
+    "discountPercent": "20%",
+    "originalPrice": "35,000원",
+    "price": "28,000",
+    "priceUnit": "원",
+    "pricePer": "/ 2kg",
+    "badges": [
+      "BEST"
+    ],
+    "tags": [
+      "#시장명물",
+      "#전통방식"
+    ],
+    "image": "https://picsum.photos/seed/kimchi/400/400"
+  },
+  {
+    "id": 5,
+    "category": "채소·과일",
+    "name": "제주 감귤 직송 달콤한 제철 귤",
+    "discountPercent": "18%",
+    "originalPrice": "22,000원",
+    "price": "18,000",
+    "priceUnit": "원",
+    "pricePer": "/ 3kg",
+    "badges": [
+      "NEW"
+    ],
+    "tags": [
+      "#제주산",
+      "#직송"
+    ],
+    "image": "https://picsum.photos/seed/tangerine/400/400"
+  },
+  {
+    "id": 6,
+    "category": "정육",
+    "name": "한우 불고기용 1+ 등급 얇은 소고기",
+    "discountPercent": "",
+    "originalPrice": "",
+    "price": "48,000",
+    "priceUnit": "원",
+    "pricePer": "/ 500g",
+    "badges": [
+      "BEST"
+    ],
+    "tags": [
+      "#한우",
+      "#1+등급"
+    ],
+    "image": "https://picsum.photos/seed/beef/400/400"
+  },
+  {
+    "id": 7,
+    "category": "건어물",
+    "name": "황태채 강원도 인제 덕장 직송",
+    "discountPercent": "17%",
+    "originalPrice": "18,000원",
+    "price": "15,000",
+    "priceUnit": "원",
+    "pricePer": "/ 300g",
+    "badges": [
+      "BEST"
+    ],
+    "tags": [
+      "#인제산",
+      "#자연건조"
+    ],
+    "image": "https://picsum.photos/seed/hwangtae/400/400"
+  },
+  {
+    "id": 8,
+    "category": "특산품",
+    "name": "수원 갈비 양념 세트 전통 레시피",
+    "discountPercent": "17%",
+    "originalPrice": "42,000원",
+    "price": "35,000",
+    "priceUnit": "원",
+    "pricePer": "/ 1세트",
+    "badges": [
+      "NEW"
+    ],
+    "tags": [
+      "#수원명물",
+      "#특산품"
+    ],
+    "image": "https://picsum.photos/seed/galbi/400/400"
+  },
+  {
+    "id": 9,
+    "category": "수산물",
+    "name": "생새우 서해 직송",
+    "discountPercent": "",
+    "originalPrice": "",
+    "price": "32,000",
+    "priceUnit": "원",
+    "pricePer": "",
+    "badges": [
+      "NEW"
+    ],
+    "tags": [],
+    "image": "https://picsum.photos/seed/shrimp/400/400"
+  },
+  {
+    "id": 10,
+    "category": "가공식품",
+    "name": "국산 참깨 100% 압착 참기름",
+    "discountPercent": "12%",
+    "originalPrice": "25,000원",
+    "price": "22,000",
+    "priceUnit": "원",
+    "pricePer": "",
+    "badges": [
+      "NEW"
+    ],
+    "tags": [],
+    "image": "https://picsum.photos/seed/sesameoil/400/400"
+  },
+  {
+    "id": 11,
+    "category": "채소·과일",
+    "name": "부드럽고 신선한 국내산 시금치",
+    "discountPercent": "",
+    "originalPrice": "",
+    "price": "3,500",
+    "priceUnit": "원",
+    "pricePer": "/ 400g",
+    "badges": [],
+    "tags": [],
+    "image": "https://picsum.photos/seed/spinach/400/400"
+  },
+  {
+    "id": 12,
+    "category": "특산품",
+    "name": "화서시장 2년 숙성 재래식 된장",
+    "discountPercent": "",
+    "originalPrice": "",
+    "price": "20,000",
+    "priceUnit": "원",
+    "pricePer": "/ 1kg",
+    "badges": [
+      "BEST"
+    ],
+    "tags": [],
+    "image": "https://picsum.photos/seed/doenjang/400/400"
+  }
+]
