@@ -1,0 +1,43 @@
+import type { Store } from '@/types/store';
+
+export const stores: Store[] = [
+  {
+    id: 'store-vegetable',
+    slug: 'hwaseo-vegetable',
+    name: '화서야채',
+    category: '채소·과일',
+    shortDescription: '봄 제철 채소와 과일을 바로 추천해주는 점포',
+    addressText: '경기도 수원시 팔달구 화서시장길 00',
+    locationText: '시장 입구 기준 좌측 1열',
+    thumbnail: 'https://picsum.photos/seed/storeveg/640/480',
+    markerId: 'marker-1',
+    featuredProductIds: ['product-tomato', 'product-tangerine'],
+    isActive: true,
+  },
+  {
+    id: 'store-fish',
+    slug: 'hwaseo-fish',
+    name: '화서횟집',
+    category: '수산물',
+    shortDescription: '제철 회와 해산물을 소개하고 방문 주문까지 연결하는 점포',
+    addressText: '경기도 수원시 팔달구 화서시장길 00-2',
+    locationText: '중앙 통로 안쪽 수산 구역',
+    thumbnail: 'https://picsum.photos/seed/storefish/640/480',
+    markerId: 'marker-2',
+    featuredProductIds: ['product-oyster', 'product-shrimp'],
+    isActive: true,
+  },
+  {
+    id: 'store-oil',
+    slug: 'hwaseo-oil',
+    name: '화서기름집',
+    category: '가공식품',
+    shortDescription: '국산 참깨와 전통 압착 방식으로 신뢰를 주는 점포',
+    addressText: '경기도 수원시 팔달구 화서시장길 00-3',
+    locationText: '시장 안쪽 기름·곡물 라인',
+    thumbnail: 'https://picsum.photos/seed/storeoil/640/480',
+    markerId: 'marker-3',
+    featuredProductIds: ['product-sesameoil', 'product-doenjang'],
+    isActive: true,
+  },
+];
