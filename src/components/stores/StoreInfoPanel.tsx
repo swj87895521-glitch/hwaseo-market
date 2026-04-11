@@ -1,15 +1,18 @@
-import type { Store } from '@/types/store';
+import { cn } from '@/lib/utils/cn';
 
-export function StoreInfoPanel({ store }: { store: Store }) {
+export function StoreInfoPanel({
+  title,
+  children,
+  className,
+}: {
+  title: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className="store-info-panel">
-      <div className="store-info-panel__eyebrow">점포 정보</div>
-      <h3>{store.name}</h3>
-      <p>{store.shortDescription}</p>
-      <ul>
-        <li>위치: {store.locationText}</li>
-        <li>주소: {store.addressText}</li>
-      </ul>
-    </div>
+    <section className={cn('store-info-panel', className)}>
+      <h2 className="store-info-panel__title">{title}</h2>
+      <div className="store-info-panel__content">{children}</div>
+    </section>
   );
 }

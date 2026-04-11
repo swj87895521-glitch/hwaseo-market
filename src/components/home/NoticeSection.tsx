@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Container } from '@/components/ui/Container';
 import { NoticeList } from '@/components/notices/NoticeList';
+import { Container } from '@/components/ui/Container';
 
 export function NoticeSection() {
   return (
@@ -9,9 +9,11 @@ export function NoticeSection() {
         <div className="notice-card">
           <div className="notice-card-header">
             <div className="notice-card-title">화서시장 소식</div>
-            <Link href="/notices" className="notice-more">더보기</Link>
+            <Link href="/notices" className="notice-more">
+              더보기
+            </Link>
           </div>
-          <NoticeList />
+          <NoticeList variant="compact" />
         </div>
       </Container>
     </section>

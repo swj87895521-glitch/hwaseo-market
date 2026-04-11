@@ -1,12 +1,376 @@
-.market-map-shell { display: grid; grid-template-columns: 1.3fr .7fr; gap: 20px; align-items: start; }
-.market-map { position: relative; min-height: 480px; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; background: linear-gradient(180deg, #f8f5ec, #efe7d5); }
-.market-map__image { position: absolute; inset: 0; display: grid; place-items: center; font-size: 28px; font-weight: 900; color: rgba(0,0,0,.18); }
-.map-marker { position: absolute; transform: translate(-50%, -50%); border: none; background: var(--primary); color: white; border-radius: 999px; padding: 8px 12px; font-size: 12px; box-shadow: 0 8px 20px rgba(232,38,26,.25); }
-.map-marker.is-active { background: var(--secondary); }
-.store-map-popup { padding: 24px; border: 1px solid var(--border); border-radius: 20px; background: white; }
-.store-map-popup__label { color: var(--primary); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
-.store-map-bottom-sheet { display: none; }
+.market-map-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.market-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.market-map-panel,
+.store-map-popup,
+.store-map-bottom-sheet {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.market-map-panel {
+  padding: 24px;
+}
+
+.market-map-panel__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.market-map-panel__eyebrow {
+  margin: 0 0 6px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.market-map-panel__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.market-map-panel__caption {
+  max-width: 280px;
+  margin: 0;
+  color: var(--muted-fg);
+  font-size: 13px;
+  text-align: right;
+}
+
+.market-map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.market-map-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 15px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--fg);
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+.market-map-filter__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--filter-accent);
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.92),
+    0 0 0 5px var(--filter-glow);
+}
+
+.market-map-filter:hover {
+  border-color: rgba(17, 24, 39, 0.18);
+}
+
+.market-map-filter.is-active {
+  border-color: var(--filter-accent, var(--primary));
+  background: var(--filter-glow, var(--primary-light));
+  box-shadow: 0 12px 28px var(--filter-glow, rgba(232, 38, 26, 0.16));
+  color: var(--filter-accent, var(--primary));
+}
+
+.market-map {
+  position: relative;
+}
+
+.market-map__frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  background: linear-gradient(180deg, #fefdfa 0%, #faf8f1 100%);
+  aspect-ratio: 672 / 539;
+}
+
+.market-map__beige {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 18% 16%,
+      rgba(255, 255, 255, 0.42),
+      transparent 22%
+    ),
+    linear-gradient(180deg, #fffefb 0%, #fbf8f0 100%);
+}
+
+.market-map__image {
+  object-fit: contain;
+  opacity: 1;
+  filter: saturate(1.06) contrast(1.04);
+}
+
+.map-marker {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  transition: transform 0.2s ease;
+}
+
+.map-marker__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--marker-color);
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.94),
+    0 0 0 5px rgba(17, 24, 39, 0.32),
+    0 6px 18px var(--marker-glow);
+}
+
+.map-marker__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.map-marker:hover,
+.map-marker.is-active {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.map-marker.is-active .map-marker__dot {
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.98),
+    0 0 0 6px rgba(17, 24, 39, 0.42),
+    0 10px 22px var(--marker-glow);
+}
+
+.store-map-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+}
+
+.store-map-popup__label,
+.store-map-bottom-sheet__eyebrow {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.store-map-popup__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.store-map-popup__description,
+.store-map-bottom-sheet > p {
+  margin: 0;
+  color: var(--muted-fg);
+  font-size: 15px;
+}
+
+.store-map-popup__overview-list,
+.store-map-bottom-sheet__overview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.store-map-popup__overview-item,
+.store-map-bottom-sheet__overview-list li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.store-map-popup__overview-item strong,
+.store-map-bottom-sheet__overview-list strong,
+.store-map-popup__detail-row strong,
+.store-map-bottom-sheet__detail strong {
+  font-size: 15px;
+}
+
+.store-map-popup__overview-item p,
+.store-map-bottom-sheet__overview-list p,
+.store-map-popup__category-card p,
+.store-map-bottom-sheet__meta p,
+.store-map-bottom-sheet__detail p {
+  margin: 4px 0 0;
+  color: var(--muted-fg);
+  font-size: 14px;
+}
+
+.store-map-popup__overview-dot,
+.store-map-bottom-sheet__dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-top: 4px;
+  border-radius: 999px;
+}
+
+.store-map-popup__category-card,
+.store-map-bottom-sheet__meta {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: var(--muted);
+}
+
+.store-map-popup__category-chip,
+.store-map-bottom-sheet__meta span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.store-map-popup__detail-grid,
+.store-map-bottom-sheet__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.store-map-popup__detail-row,
+.store-map-bottom-sheet__detail > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.store-map-popup__detail-row span,
+.store-map-popup__detail-items > span,
+.store-map-bottom-sheet__detail span {
+  color: var(--muted-fg);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.store-map-popup__detail-items ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.store-map-popup__detail-items li {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.store-map-bottom-sheet {
+  display: none;
+  padding: 18px;
+}
+
+.store-map-bottom-sheet h3 {
+  margin: 4px 0 8px;
+  font-size: 22px;
+}
+
 @media (max-width: 960px) {
-  .market-map-shell { grid-template-columns: 1fr; }
-  .store-map-bottom-sheet { display: block; margin-top: 12px; padding: 16px; border-radius: 16px; background: white; border: 1px solid var(--border); }
+  .market-map-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .market-map-panel {
+    padding: 20px;
+  }
+
+  .market-map-panel__header {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .market-map-panel__caption {
+    max-width: none;
+    text-align: left;
+  }
+
+  .store-map-popup {
+    display: none;
+  }
+
+  .store-map-bottom-sheet {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .market-map-panel {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .market-map-panel__title {
+    font-size: 20px;
+  }
+
+  .market-map-filters {
+    gap: 8px;
+  }
+
+  .market-map-filter {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .map-marker {
+    width: 28px;
+    height: 28px;
+  }
+
+  .map-marker__dot {
+    width: 14px;
+    height: 14px;
+  }
 }

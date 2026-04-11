@@ -1,20 +1,7 @@
-export const categories = [
-  '채소·과일',
-  '수산물',
-  '정육',
-  '반찬·젓갈',
-  '건어물',
-  '곡류·잡곡',
-  '가공식품',
-  '특산품',
-];
-
 export const primaryNavigation = [
-  { label: '홈', href: '/' },
-  { label: '점포보기', href: '/stores' },
-  { label: '상품', href: '/products' },
-  { label: '이벤트/쿠폰', href: '/events' },
+  { label: '전체 카테고리', href: '/products' },
+  { label: '시장소개', href: '/about' },
   { label: '화서소식', href: '/notices' },
-  { label: '방문안내', href: '/visit-guide' },
-  { label: '시장안내', href: '/about' },
+  { label: '점포보기', href: '/stores' },
+  { label: '사장님이 쏩니다', href: '/events' },
 ];

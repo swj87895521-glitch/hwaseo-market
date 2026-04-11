@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { SearchForm } from '@/components/common/SearchForm';
 import { IconButton } from '@/components/common/IconButton';
+import { SearchForm } from '@/components/common/SearchForm';
 import { Container } from '@/components/ui/Container';
 
 export function Header() {
@@ -8,17 +8,29 @@ export function Header() {
     <header className="site-header">
       <Container>
         <div className="header-main">
-          <Link href="/" className="logo">
-            <div className="logo-icon">🏪</div>
-            <div className="logo-text">
-              <span className="logo-name">화서시장</span>
-              <span className="logo-sub">공식 온라인몰</span>
-            </div>
+          <Link href="/" className="logo" aria-label="화서시장 홈">
+            <img
+              className="logo-mark logo-mark--text"
+              src="/images/logos/hwaseo-market-logo-text.png"
+              alt="화서시장 로고"
+            />
           </Link>
           <SearchForm />
           <div className="header-actions">
-            <IconButton label="내 계정">👤</IconButton>
-            <IconButton label="장바구니">🛒</IconButton>
+            <IconButton label="마이페이지">
+              <img
+                src="/images/icons/icon-mypage.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </IconButton>
+            <IconButton label="장바구니">
+              <img
+                src="/images/icons/icon-cart.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </IconButton>
           </div>
         </div>
       </Container>
