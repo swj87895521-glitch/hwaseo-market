@@ -1,4 +1,7 @@
-# 06_UI_TOKENS
+﻿# 06_UI_TOKENS
+
+이 문서는 색상, 톤, 레이아웃 같은 디자인 토큰을 정의한다.
+실제 UI 패턴, 컴포넌트 규칙, 반응형 규칙은 `docs/08_DESIGN_RULES.md`에서 관리한다.
 
 ## Core Colors
 
