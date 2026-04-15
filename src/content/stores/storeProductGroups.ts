@@ -1,0 +1,40 @@
+import type { StoreProductGroup } from '@/types/storeProductGroup';
+
+export const storeProductGroups: StoreProductGroup[] = [
+  {
+    id: 'group-hwaseo-vegetable',
+    storeSlug: 'hwaseo-vegetable',
+    categoryLabel: '채소 · 과일',
+    heroCopy: '화서야채',
+    description: '점포 소개와 대표 상품을 한 번에 보여주는 홈 핵심 섹션입니다.',
+    locationText: '화서야채 · 시장 입구 기준 좌측 1열',
+    buttonText: '점포 보러가기',
+    featuredProductIds: ['veg-bomnamul', 'veg-jjigae-pack'],
+    displayOrder: 1,
+    isActive: true,
+  },
+  {
+    id: 'group-hwaseo-fish',
+    storeSlug: 'hwaseo-fish',
+    categoryLabel: '수산물',
+    heroCopy: '화서수산',
+    description: '점포 소개와 대표 상품을 한 번에 보여주는 홈 핵심 섹션입니다.',
+    locationText: '화서수산 · 중앙 통로 안쪽 수산 구역',
+    buttonText: '점포 보러가기',
+    featuredProductIds: ['fish-seasonal-set', 'fish-tang-pack'],
+    displayOrder: 2,
+    isActive: true,
+  },
+  {
+    id: 'group-hwaseo-oil',
+    storeSlug: 'hwaseo-oil',
+    categoryLabel: '가공식품',
+    heroCopy: '화서기름',
+    description: '점포 소개와 대표 상품을 한 번에 보여주는 홈 핵심 섹션입니다.',
+    locationText: '화서기름 · 메인 통로 옆 가공식품 라인',
+    buttonText: '점포 보러가기',
+    featuredProductIds: ['oil-sesame', 'oil-perilla'],
+    displayOrder: 3,
+    isActive: true,
+  },
+];

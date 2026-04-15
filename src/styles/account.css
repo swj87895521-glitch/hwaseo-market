@@ -1,0 +1,682 @@
+.mypage-page,
+.coupon-page,
+.admin-page {
+  background: linear-gradient(180deg, #fbf7f1 0%, #fffdf8 240px, #ffffff 240px);
+}
+
+.mypage-page__container,
+.coupon-page__container,
+.admin-page__container {
+  padding: 44px 0 84px;
+}
+
+.mypage-title-block {
+  padding: 0 0 24px;
+}
+
+.mypage-title-block__title,
+.admin-hero__title,
+.coupon-hero__title,
+.login-gate__title,
+.loyalty-widget__title {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.08;
+}
+
+.admin-hero,
+.coupon-hero {
+  padding: 32px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(232, 38, 26, 0.12), rgba(255, 255, 255, 0.96));
+  border: 1px solid rgba(232, 38, 26, 0.12);
+  box-shadow: 0 20px 42px rgba(17, 24, 39, 0.06);
+}
+
+.admin-hero__eyebrow,
+.coupon-hero__eyebrow,
+.loyalty-widget__eyebrow,
+.login-gate__eyebrow {
+  margin: 0 0 8px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-hero__description,
+.coupon-hero__description,
+.login-gate__desc,
+.loyalty-widget__desc {
+  margin: 14px 0 0;
+  color: var(--muted-fg);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.mypage-shell,
+.coupon-section,
+.admin-grid {
+  margin-top: 4px;
+}
+
+.mypage-tabs {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.05);
+}
+
+.mypage-tabs button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted-fg);
+  font-weight: 800;
+}
+
+.mypage-tabs button.is-active {
+  background: var(--primary);
+  color: white;
+}
+
+.badge-subtabs {
+  display: inline-flex;
+  gap: 18px;
+  margin: 18px 0 20px;
+  padding-left: 4px;
+}
+
+.badge-subtabs button {
+  padding: 0 0 10px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--muted-fg);
+  font-weight: 800;
+}
+
+.badge-subtabs button.is-active {
+  color: var(--fg);
+  border-bottom-color: var(--primary);
+}
+
+.loyalty-workspace {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.loyalty-store-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.loyalty-store-list__item {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+  text-align: left;
+}
+
+.loyalty-store-list__item:hover,
+.loyalty-store-list__item.is-active {
+  background: rgba(17, 24, 39, 0.04);
+}
+
+.loyalty-store-list__item.is-dimmed {
+  opacity: 0.48;
+}
+
+.loyalty-store-list__icon,
+.loyalty-store-detail__symbol,
+.badge-card__symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 800;
+  flex: 0 0 auto;
+}
+
+.loyalty-store-list__icon--muted,
+.loyalty-store-detail__symbol--muted,
+.badge-card__symbol--muted {
+  background: rgba(17, 24, 39, 0.12);
+  color: rgba(17, 24, 39, 0.42);
+}
+
+.loyalty-store-list__icon--starter,
+.loyalty-store-detail__symbol--starter,
+.badge-card__symbol--starter {
+  background: linear-gradient(135deg, #4a7a5a, #6ca87e);
+  color: white;
+}
+
+.loyalty-store-list__icon--regular,
+.loyalty-store-detail__symbol--regular,
+.badge-card__symbol--regular {
+  background: linear-gradient(135deg, #2f6cf5, #5f8fff);
+  color: white;
+}
+
+.loyalty-store-list__icon--silver,
+.loyalty-store-detail__symbol--silver,
+.badge-card__symbol--silver {
+  background: linear-gradient(135deg, #7f8794, #c8d0dc);
+  color: white;
+}
+
+.loyalty-store-list__icon--gold,
+.loyalty-store-detail__symbol--gold,
+.badge-card__symbol--gold {
+  background: linear-gradient(135deg, #9b6b00, #f1b02f);
+  color: white;
+}
+
+.loyalty-store-list__icon--legend,
+.loyalty-store-detail__symbol--legend,
+.badge-card__symbol--legend {
+  background: linear-gradient(135deg, #7a1cac, #ff6a3d, #ffd977);
+  color: white;
+}
+
+.loyalty-store-list__body,
+.badge-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.loyalty-store-list__body strong {
+  font-size: 15px;
+}
+
+.loyalty-store-list__body span,
+.badge-card__badge-name,
+.loyalty-store-detail__meta,
+.loyalty-store-detail__label,
+.loyalty-store-detail__next {
+  color: var(--muted-fg);
+  font-size: 12px;
+}
+
+.loyalty-store-list__score {
+  color: var(--fg);
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.loyalty-store-detail {
+  padding: 26px;
+  border-radius: 24px;
+  background: #2b2a27;
+  color: #f5f1e8;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.loyalty-store-detail__header {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.loyalty-store-detail__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.loyalty-store-detail__meta,
+.loyalty-store-detail__label,
+.loyalty-store-detail__next {
+  color: rgba(245, 241, 232, 0.72);
+}
+
+.loyalty-store-detail__badge-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.loyalty-store-detail__badge {
+  display: block;
+  margin-top: 6px;
+  font-size: 30px;
+  color: #fff6da;
+  line-height: 1.1;
+}
+
+.loyalty-store-detail__score {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  min-height: 72px;
+  border-radius: 18px;
+  padding: 0 18px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: white;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.loyalty-store-detail__score--muted {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loyalty-store-detail__score--starter {
+  background: linear-gradient(135deg, #4a7a5a, #6ca87e);
+}
+
+.loyalty-store-detail__score--regular {
+  background: linear-gradient(135deg, #2f6cf5, #5f8fff);
+}
+
+.loyalty-store-detail__score--silver {
+  background: linear-gradient(135deg, #7f8794, #c8d0dc);
+}
+
+.loyalty-store-detail__score--gold {
+  background: linear-gradient(135deg, #9b6b00, #f1b02f);
+}
+
+.loyalty-store-detail__score--legend {
+  background: linear-gradient(135deg, #7a1cac, #ff6a3d, #ffd977);
+}
+
+.loyalty-store-detail__next {
+  margin: 18px 0 10px;
+  font-weight: 700;
+}
+
+.loyalty-store-detail__cabinet,
+.badge-card__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.badge-cabinet-grid,
+.coupon-wallet__grid,
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.badge-card,
+.coupon-card,
+.admin-card,
+.loyalty-widget,
+.login-gate__panel {
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.06);
+}
+
+.badge-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #2b2a27;
+  color: #f5f1e8;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.badge-card.is-locked {
+  opacity: 0.5;
+}
+
+.badge-card__title,
+.coupon-card__title,
+.admin-card__title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.badge-card__badge-name {
+  margin: 6px 0 0;
+}
+
+.badge-card__chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.badge-card__chip.is-muted {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: rgba(255, 255, 255, 0.38) !important;
+}
+
+.badge-card__chip--starter {
+  background: linear-gradient(135deg, #4a7a5a, #6ca87e);
+}
+
+.badge-card__chip--regular {
+  background: linear-gradient(135deg, #2f6cf5, #5f8fff);
+}
+
+.badge-card__chip--silver {
+  background: linear-gradient(135deg, #7f8794, #c8d0dc);
+}
+
+.badge-card__chip--gold {
+  background: linear-gradient(135deg, #9b6b00, #f1b02f);
+}
+
+.badge-card__chip--legend {
+  background: linear-gradient(135deg, #7a1cac, #ff6a3d, #ffd977);
+}
+
+.badge-progress {
+  margin-top: 18px;
+}
+
+.badge-progress__track {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+
+.badge-progress__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f1b02f, #ff8a45);
+}
+
+.badge-progress__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  color: rgba(245, 241, 232, 0.72);
+  font-size: 13px;
+}
+
+.loyalty-widget__legend {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(46, 125, 50, 0.12);
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.coupon-card.is-inactive {
+  opacity: 0.68;
+}
+
+.coupon-card__top,
+.admin-list__row,
+.coupon-register__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.coupon-card__type,
+.coupon-card__status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.coupon-card__type--offline {
+  background: rgba(46, 125, 50, 0.12);
+  color: var(--secondary);
+}
+
+.coupon-card__type--online,
+.coupon-card__status--available {
+  background: rgba(232, 38, 26, 0.08);
+  color: var(--primary);
+}
+
+.coupon-card__status--used,
+.coupon-card__status--expired {
+  background: rgba(17, 24, 39, 0.08);
+  color: var(--muted-fg);
+}
+
+.coupon-card__description,
+.coupon-card__source {
+  margin: 10px 0 0;
+  color: var(--muted-fg);
+  font-size: 15px;
+}
+
+.coupon-card__meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.coupon-card__meta-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.06);
+  color: var(--muted-fg);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.coupon-card__code-box {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fbf7f1;
+  border: 1px dashed rgba(232, 38, 26, 0.18);
+}
+
+.coupon-card__code-label {
+  display: block;
+  color: var(--muted-fg);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.coupon-card__code {
+  font-size: 24px;
+  letter-spacing: 0.04em;
+}
+
+.coupon-register {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.06);
+}
+
+.coupon-register__label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.coupon-register__row input {
+  flex: 1;
+  min-width: 0;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(232, 38, 26, 0.22);
+  border-radius: 14px;
+}
+
+.coupon-register__row button {
+  min-width: 108px;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background: var(--primary);
+  color: white;
+  font-weight: 800;
+}
+
+.coupon-register__feedback {
+  margin-top: 16px;
+  padding: 16px 18px;
+  border-radius: 16px;
+}
+
+.coupon-register__feedback.is-success {
+  background: rgba(46, 125, 50, 0.08);
+}
+
+.coupon-register__feedback.is-error {
+  background: rgba(232, 38, 26, 0.08);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.login-gate {
+  margin-top: 28px;
+}
+
+.login-gate__panel {
+  background: white;
+  border: 1px solid var(--border);
+}
+
+.admin-grid {
+  align-items: start;
+}
+
+.admin-card__title {
+  margin-top: 0;
+}
+
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-list__row {
+  min-height: 52px;
+  padding: 0 14px;
+  border-radius: 14px;
+  background: #fbf7f1;
+}
+
+.wallet-empty {
+  padding: 28px;
+  border: 1px dashed rgba(17, 24, 39, 0.16);
+  border-radius: 20px;
+  text-align: center;
+  color: var(--muted-fg);
+}
+
+@media (max-width: 960px) {
+  .loyalty-workspace,
+  .badge-cabinet-grid,
+  .coupon-wallet__grid,
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loyalty-store-detail__badge-box,
+  .coupon-register__row,
+  .admin-list__row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .coupon-register__row button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .mypage-page__container,
+  .coupon-page__container,
+  .admin-page__container {
+    padding-top: 28px;
+  }
+
+  .coupon-hero,
+  .admin-hero,
+  .coupon-register,
+  .badge-card,
+  .coupon-card,
+  .admin-card,
+  .loyalty-widget,
+  .login-gate__panel,
+  .loyalty-store-detail {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .mypage-title-block__title,
+  .admin-hero__title,
+  .coupon-hero__title,
+  .login-gate__title,
+  .loyalty-widget__title {
+    font-size: 32px;
+  }
+
+  .coupon-card__title,
+  .admin-card__title,
+  .loyalty-store-detail__title,
+  .badge-card__title {
+    font-size: 24px;
+  }
+
+  .loyalty-store-detail__score {
+    font-size: 28px;
+    min-height: 60px;
+  }
+
+  .coupon-card__code {
+    font-size: 20px;
+  }
+}

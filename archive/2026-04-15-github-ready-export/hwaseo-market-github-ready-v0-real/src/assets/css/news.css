@@ -1,0 +1,23 @@
+/* Notice + Quick Links */
+    .bottom-section { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 80px; }
+    .notice-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+    .notice-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+    .notice-card-title { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    .notice-card-title svg { width: 18px; height: 18px; fill: none; stroke: var(--primary); stroke-width: 2; stroke-linecap: round; }
+    .notice-more { font-size: 13px; color: var(--muted-fg); transition: color .15s; }
+    .notice-more:hover { color: var(--primary); }
+    .notice-list { display: flex; flex-direction: column; gap: 14px; }
+    .notice-item { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .notice-item a { font-size: 13px; font-weight: 500; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color .15s; }
+    .notice-item a:hover { color: var(--primary); }
+    .notice-imp { color: var(--primary); font-weight: 700; }
+    .notice-date { font-size: 11px; color: var(--muted-fg); white-space: nowrap; }
+
+    .quick-links { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .quick-card { border-radius: var(--radius); padding: 28px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; transition: transform .2s; cursor: pointer; border: 1px solid transparent; }
+    .quick-card:hover { transform: scale(1.04); }
+    .quick-card.red { background: linear-gradient(135deg, rgba(232,38,26,.1) 0%, rgba(232,38,26,.05) 100%); border-color: rgba(232,38,26,.12); }
+    .quick-card.green { background: linear-gradient(135deg, rgba(46,125,50,.1) 0%, rgba(46,125,50,.05) 100%); border-color: rgba(46,125,50,.12); }
+    .quick-icon { font-size: 34px; margin-bottom: 12px; }
+    .quick-title { font-weight: 700; font-size: 14px; color: var(--fg); margin-bottom: 4px; }
+    .quick-desc { font-size: 11px; color: var(--muted-fg); }
